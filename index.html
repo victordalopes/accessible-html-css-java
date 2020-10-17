@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+  <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+  
+  
+  <title>Creative Coding Club</title>
+</head>
+  
+  <a href="#skiptocontent">Skip to content</a> <!-- Adds a "Skip to content" feature; useful for websites with lots of navigational features that are going to be read by screen readers for people with visual impairment -->
+  
+<body id="bodytag">
+  
+  <div class="w3-top w3-top-bar w3-black">
+  <nav id="top">
+    <a class="w3-bar-item w3-button" href="javascript:void()" onclick="incFontSize()">Text size</a>
+    <a class="w3-bar-item w3-button" href="javascript:void()" onclick="changeTheme()">Change theme</a>
+    
+    
+  	<a class="w3-bar-item w3-button" href="#top">Home</a>
+    <a class="w3-bar-item w3-button" href="#about">About us</a>
+    <a class="w3-bar-item w3-button" href="#events">Events</a>
+    <a class="w3-bar-item w3-button" href="#contact">Contact us</a>
+  </nav>
+  </div>
+  <br>
+  
+  <img style="width:100%;" src="synthclub.jpg" alt="Spectogram of a synth jam in green and blue">
+  
+  <div class="w3-content">
+  
+  <div class="w3-container w3-justify">
+  
+    <div id="skiptocontent"></div>
+  
+  <header>
+    <h1>Welcome to the Creative Coding Club page!</h1>
+  </header>
+  <main>
+    <!-- about us section -->
+    <section id="about">
+      <h2>About us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <a href="#top">Back to top</a>
+    </section>
+    <!-- end of about us section -->
+    
+    <!-- events section -->
+    <section id="events">
+      <h2>Events</h2>
+      Upcoming events:
+      <ul>
+        <li>Super community hackathon - all welcome! 27th August</li>
+       </ul>
+      
+      Past events
+       <ul>
+        <li>Super community hackathon - all welcome! 27th August</li>
+        <li>Super community hackathon - all welcome! 27th August</li>
+        <li>Super community hackathon - all welcome! 27th August</li>
+       </ul>
+      <a href="#top">Back to top</a>
+    </section>
+    <!-- end of events section -->
+    
+    <!-- contact section -->
+    <section id="contact">
+      <h2>Contact us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <a href="#top">Back to top</a>
+     </section>
+    <!-- end of contact section -->
+  </main>
+  
+  </div> <!-- main container div -->
+  </div> <!-- end of content div -->
+  <div class="w3-black" style="text-align: center; padding: 10px;">
+  <footer>
+  Desenvolvido por VAL Comunicações no curso "Create Accessible Interfaces" da Future Learn
+  </footer>
+  </div> <!-- footer div -->
+  
+  
+<script language="javascript" type="text/javascript">
+  
+var fontSize = 16;
+  function incFontSize() {
+    fontSize = fontSize + 4;
+    if (fontSize > 50)
+    {
+      fontSize = 16;
+    }
+    
+    //boost p tags
+    var tags = document.getElementsByTagName('p');
+    for (var i=0; i < tags.length; ++i) {
+      tags[i].style.fontSize = fontSize + "px"; }
+    //boost li tags
+ tags = document.getElementsByTagName('li');
+    for (var i=0; i < tags.length; ++i) {
+      tags[i].style.fontSize = fontSize + "px"; }
+     //boost h2 tags
+ tags = document.getElementsByTagName('h2');
+    for (var i=0; i < tags.length; ++i) {
+      tags[i].style.fontSize = (fontSize +4) + "px"; }
+    
+  }
+  
+  var theme = 0;
+  
+  function changeTheme() {
+    
+    if (theme == 0)
+    {
+     bodytag.style.backgroundColor = 'black'; 
+     bodytag.style.color = 'white';
+    }
+    
+    if (theme == 1)
+    {
+     bodytag.style.backgroundColor = 'lightblue'; 
+     bodytag.style.color = 'black';
+    }
+    if (theme == 2)
+    {
+     bodytag.style.backgroundColor = 'white'; 
+     bodytag.style.color = 'black';
+    }
+	theme ++;
+    if (theme ==3)
+    {
+      theme = 0;
+    }
+  }
+
+</script>
+</body>
+</html>
